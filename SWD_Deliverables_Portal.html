@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samurai Wolf Defense | Instructor Alex A.</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --pur: #6B21A8;
+  --pur2: #4C1D95;
+  --red: #CC1F1F;
+  --navy: #1E1A2E;
+  --navyd: #0A0810;
+  --card: #201C30;
+  --wht: #F2EEF2;
+  --gray: #8A8490;
+  --gray2: #BDB8C0;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--navyd); color: var(--wht); font-family: 'Raleway', sans-serif; min-height: 100vh; }
+
+/* HEADER */
+.site-header {
+  background: linear-gradient(135deg, #1E1A2E, #16122A);
+  border-bottom: 3px solid var(--red);
+  padding: 48px 60px;
+  text-align: center;
+}
+.site-header h1 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--wht);
+  letter-spacing: 2px;
+}
+.site-header h1 span { color: var(--red); }
+.site-header .tagline {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 12px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-top: 8px;
+}
+.site-header .subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--gray2);
+  letter-spacing: 2px;
+  margin-top: 16px;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(160deg, #0D0B1A 0%, #1E1A2E 40%, #2D1165 100%);
+  padding: 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(107,33,168,0.25), transparent 55%),
+              radial-gradient(ellipse at 70% 80%, rgba(204,31,31,0.15), transparent 55%);
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero .eyebrow {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+.hero h2 {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--wht);
+  margin-bottom: 12px;
+}
+.hero p {
+  font-size: 14px;
+  color: var(--gray2);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(107,33,168,0.35), transparent);
+  margin: 0;
+}
+
+/* DELIVERABLES SECTION */
+.deliverables {
+  padding: 60px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sec-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--red);
+  text-align: center;
+  margin-bottom: 6px;
+}
+.sec-title {
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--wht);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.sec-desc {
+  font-size: 13px;
+  color: var(--gray2);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.d-card {
+  background: var(--card);
+  border: 1px solid rgba(107,33,168,0.2);
+  padding: 24px 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.d-card:hover {
+  border-color: rgba(204,31,31,0.5);
+  transform: translateY(-3px);
+}
+.d-card .icon {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.d-card h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--wht);
+  margin-bottom: 6px;
+}
+.d-card p {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.d-card a {
+  display: inline-block;
+  padding: 7px 18px;
+  background: var(--red);
+  color: var(--wht);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.d-card a:hover { background: #E02424; }
+.d-card .file-type {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--pur);
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(107,33,168,0.2);
+}
+.footer-badge {
+  display: inline-block;
+  background: rgba(107,33,168,0.12);
+  border: 1px solid rgba(107,33,168,0.3);
+  color: var(--pur);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+.footer-sub {
+  font-size: 11px;
+  color: var(--gray);
+  margin-top: 12px;
+}
+
+@media(max-width:768px) {
+  .site-header { padding: 32px 20px; }
+  .site-header h1 { font-size: 28px; }
+  .hero { padding: 40px 20px; }
+  .deliverables { padding: 40px 20px; }
+  .d-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <h1>SAMURAI <span>WOLF</span> DEFENSE</h1>
+  <div class="tagline">Firearms Training &bull; Self-Defense &bull; Personal Protection</div>
+  <div class="subtitle">Instructor Alex A.</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Phoenix Blueprint Client</div>
+    <h2>Project Deliverables</h2>
+    <p>Welcome to your Samurai Wolf Defense project hub. Below you will find every deliverable created as part of your Phoenix Blueprint package — brand assets, marketing materials, and operational guides.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="deliverables">
+  <div class="sec-tag">Your Package</div>
+  <div class="sec-title">All Deliverables</div>
+  <p class="sec-desc">Click any item to view or download. All files are ready for immediate use.</p>
+
+  <div class="d-grid">
+
+    <div class="d-card">
+      <div class="icon">&#127912;</div>
+      <h3>Brand Kit</h3>
+      <p>Complete brand identity — logo usage, color palette, typography, and visual standards for Samurai Wolf Defense.</p>
+      <a href="SWD_Brand_Kit.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 980 KB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128196;</div>
+      <h3>Business Cards</h3>
+      <p>Print-ready business card designs with contact information, brand elements, and professional layout.</p>
+      <a href="SWD_Business_Cards.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 432 KB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128220;</div>
+      <h3>Flyer</h3>
+      <p>Promotional flyer for marketing, events, class promotions, and client outreach campaigns.</p>
+      <a href="SWD_Flyer.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 1.2 MB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128221;</div>
+      <h3>Meeting Notes</h3>
+      <p>Discovery session notes covering brand direction, goals, target audience, and project scope.</p>
+      <a href="SWD_Meeting_Notes.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 532 KB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128214;</div>
+      <h3>Onboarding Guide</h3>
+      <p>Client onboarding guide with setup instructions, deliverable overview, and next steps.</p>
+      <a href="SWD_Onboarding_Guide.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 2.0 MB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128247;</div>
+      <h3>Social Media Inserts</h3>
+      <p>Branded social media graphics and templates — ready to post on Instagram, Facebook, and more.</p>
+      <a href="SWD_Social_Media_Inserts.html" target="_blank">View</a>
+      <div class="file-type">HTML &bull; 4.4 MB</div>
+    </div>
+
+    <div class="d-card">
+      <div class="icon">&#128187;</div>
+      <h3>Website Preview</h3>
+      <p>Website mockup and design preview for the Samurai Wolf Defense online presence.</p>
+      <a href="SWD_Website_Preview.pdf" target="_blank">Download</a>
+      <div class="file-type">PDF &bull; 608 KB</div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-badge">Samurai Wolf Defense &bull; Phoenix Blueprint</div>
+  <p class="footer-sub">Built by MFS Empire</p>
+</footer>
+
+</body>
+</html>
